@@ -1,95 +1,89 @@
-/* ITS FOR  INDEX.HTML */
-
-/* Body part*/
-body{
-    background-color: rgba(0, 255, 255, 0.303);
-
+/* Body part */
+body {
+  background-color: rgba(0, 255, 255, 0.303);
 }
 
 /* For Top Nav Bar */
 .TopNavBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-image: linear-gradient(to right, #239ff8, #7eff9b);
-    overflow: hidden;
-    padding: 0 10px;
-  }
-  
-  .TopNavBar a {
-    font-size: x-large;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .TopNavBar a.active {
-    font-weight: bold;
-  }
-  
-  .logo {
-    height: 30px;
-    width: 30px;
-    transition: transform 0.3s ease; /* Adding transition for a smooth effect */
-  }
-  
-  /* Hover effect for the logo */
-  .logo-link:hover .logo {
-    margin-top: 9px;
-    transform: scale(1.6); /* Scale the logo on hover */
-  }
-  
-  
-.Banner {
-    width: 99.9%;
-    padding-top: 2px;
-}
-.Ai-heading{
-    font-family: 'Times New Roman', Times, serif;
-    background-image: linear-gradient(to right, #239ff8, #7eff9b);
-    color: white; /* Set text color for visibility */
-    padding: 7px; /* Add some padding for readability */
-    border-radius: 5px;
-}
-.info_AI{
-    float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-image: linear-gradient(to right, #239ff8, #7eff9b);
+  overflow: hidden;
+  padding: 0 10px;
 }
 
-.midpart{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap:100px
+.TopNavBar a {
+  font-size: x-large;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.midpart .info_AI{
-    float: left;
-    position: relative;
-    right: 14%;
+.TopNavBar a.active {
+  font-weight: bold;
 }
+
+.logo {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+/* Hover effect for the logo */
+.logo-link:hover .logo {
+  margin-top: 9px;
+  transform: scale(1.6); /* Scale the logo on hover */
+}
+
+.Ai-heading {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: linear-gradient(to right, #239ff8, #7eff9b);
+  color: white; /* Set text color for visibility */
+  padding: 7px; /* Add some padding for readability */
+  border-radius: 5px;
+}
+
+.info_AI {
+  float: left;
+}
+
+.midpart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+}
+
+.midpart .info_AI {
+  float: left;
+  position: relative;
+  right: 14%;
+}
+
 /* Styles for the button link */
 .neon-button {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #239ff8, #7eff9b); /* Light green neon gradient */
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Neon glow effect on hover */
-  .neon-button:hover {
-    transform: scale(1.2);
-    background-image: linear-gradient(to right, #7eff9b, #239ff8); /* Reverse gradient on hover */
-    box-shadow: 0 0 10px #239ff8, 0 0 20px #239ff8, 0 0 40px #239ff8; /* Adding a glow effect */
-  }
-  
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #239ff8, #7eff9b); /* Light green neon gradient */
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  
+/* Neon glow effect on hover */
+.neon-button:hover {
+  transform: scale(1.2);
+  background-image: linear-gradient(to right, #7eff9b, #239ff8); /* Reverse gradient on hover */
+  box-shadow: 0 0 10px #239ff8, 0 0 20px #239ff8, 0 0 40px #239ff8; /* Adding a glow effect */
+}
+.slideshow-container{
+  padding-top: 5px;
+}
