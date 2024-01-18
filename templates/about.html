@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Bridge About</title>
+    <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<body>
+    <div class="about-content-div">
+        <h1>About Health Bridge</h1>
+
+        <div class="about-content">
+            <p>
+                Welcome to the Diabetic Test website, a cutting-edge application developed by the talented students of <strong>B.Tech CSE</strong> at <strong>Brainware University</strong>. As part of their 7th-semester project, these aspiring engineers have crafted a powerful tool to predict diabetes using advanced machine learning techniques.
+            </p>
+            <p>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li><strong>Diabetes Prediction:</strong> Our website employs a robust <strong>Support Vector Classification (SVC)</strong> model, meticulously trained on a comprehensive diabetes dataset. This enables accurate predictions based on user input.</li>
+                <li><strong>User-Friendly Interface:</strong> With a user-friendly interface, the website allows individuals to input relevant health information through a simple HTML form. The intuitive design ensures a seamless experience for users of all backgrounds.</li>
+                <li><strong>Informative Results:</strong> Receive detailed results that provide insights into the likelihood of diabetes based on the input data. The system aims to empower users with valuable health information.</li>
+                <li><strong>Developer Information:</strong> Get to know the brilliant minds behind this project. Meet the developers from Brainware University who have dedicated their skills to creating this innovative solution.</li>
+            </ul>
+            <p>
+                <strong>Our Mission:</strong> Driven by a passion for technology and a commitment to improving healthcare, our team strives to make a positive impact on the community. By combining machine learning with web development, we aim to provide a valuable resource for diabetes prediction.Explore the Diabetic Test website and take a step towards a healthier future. Your well-being is our priority.
+            </p>
+            <p>
+                <strong>Disclaimer:</strong> The predictions made by the website are based on a trained model and should not replace professional medical advice. Consult with a healthcare professional for accurate diagnosis and guidance.
+            </p>
+        </div>
+    </div>
+        <div class="container">
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/developers/1.jpg') }}" alt="Developer 1">
+                </div>
+                <div class="content">
+                    <h3>Developer 1</h3>
+                    <p>Description about Developer 1's work in the project.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/developers/2.jpg') }}" alt="Developer 2">
+                </div>
+                <div class="content">
+                    <h3>Developer 2</h3>
+                    <p>Description about Developer 2's work in the project.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/developers/3.jpg') }}" alt="Developer 3">
+                </div>
+                <div class="content">
+                    <h3>Developer 3</h3>
+                    <p>Description about Developer 3's work in the project.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/developers/4.jpg') }}" alt="Developer 4">
+                </div>
+                <div class="content">
+                    <h3>Developer 4</h3>
+                    <p>Description about Developer 4's work in the project.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Brainware University container -->
+    <div class="brainware-university-container">
+        <img src="{{ url_for('static', filename='images/brainware-logo.png') }}" alt="Brainware University Logo">
+        <!-- Make the button text a hyperlink -->
+        <a href="https://www.brainwareuniversity.ac.in" target="_blank">
+            <button>Brainware University</button>
+        </a>
+    </div>
+</body>
+
+</html>

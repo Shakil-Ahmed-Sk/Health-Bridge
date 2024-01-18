@@ -15,3 +15,4 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 6000); // Change slide every 6 seconds (6000 milliseconds)
 }
+

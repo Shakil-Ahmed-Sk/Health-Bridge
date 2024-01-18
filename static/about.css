@@ -1,0 +1,126 @@
+body {
+    background-color: rgba(0, 255, 255, 0.303);
+}
+/* for about Health Bridge*/
+.about-content-div{
+    font-family: 'Courier New', Courier, monospace;
+padding-left: 25px;
+padding-top: 25px;
+padding-bottom: 10px;
+}
+/* For card */
+
+.container {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 30px;
+    flex-direction: row;
+    align-content: center;
+}
+
+.container .card {
+    position: relative;
+    width: 300px; /* Adjust the width based on your preference */
+    max-width: 100%; /* Ensure the card doesn't exceed the container width */
+    height: 215px;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.container .card:hover {
+    height: 320px;
+}
+
+.container .card:nth-child(1) {
+    background-color: rgb(184, 219, 251);
+}
+
+.container .card:nth-child(2) {
+    background-color: #b5e7a0; /* Green */
+}
+
+.container .card:nth-child(3) {
+    background-color: rgb(39, 72, 112); /* Blue */
+}
+
+.container .card:nth-child(4) {
+    background-color: #ffd966; /* Yellow */
+}
+
+.container .card .image {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -40%;
+    left: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container .card .image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.container .card .content {
+    position: relative;
+    top: -140px;
+    padding: 5px 10px;
+    color: #111;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+/* brainware-university.css */
+
+.brainware-university-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.brainware-university-container img {
+    width: 150px; /* Adjust the width based on your logo size */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Style for the link */
+.brainware-university-container a {
+    text-decoration: none;
+}
+
+.brainware-university-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff; /* Blue color, you can change this */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.brainware-university-container button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}

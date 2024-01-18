@@ -1,26 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html>Health Bridge
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/static/images/icon/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Bridge</title>
+    <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-
     <!-- Top Navigation Bar -->
     <div class="TopNavBar">
         <a href="#icon" class="logo-link">
             <img src="/static/images/Ai_icon.png" class="logo" alt="AI Logo" />
         </a>
-        <a class="active" href="#Home"><b>Home</b></a>
-        <a href="#About"><b>About</b></a>
-        <a class="FeedBack" href="#Feedback"><b>Feedback</b></a>
+        <!-- Update the Home link to use 'index' as the endpoint -->
+            <a class="{{ 'active' if page == 'home' else '' }}" href="{{ url_for('index') }}"><b>Home</b></a>
+            <a class="{{ 'active' if page == 'about' else '' }}" href="{{ url_for('about') }}"><b>About</b></a>
+            <a class="{{ 'active' if page == 'input' else '' }}" href="{{ url_for('input_page') }}"><b>Input</b></a>
+
     </div>
 
     <!-- Slideshow container -->
@@ -91,7 +92,6 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-
 </body>
 
 </html>

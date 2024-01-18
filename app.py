@@ -35,6 +35,13 @@ X_test_prediction = classifier.predict(X_test)
 test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 print('Accuracy score of the test data:', test_data_accuracy)
 
+# Add a placeholder for developers
+developers = [
+        {'name': 'Developer 1', 'description': 'Lorem ipsum...', 'photo': 'images/developers/1.jpeg'},
+        {'name': 'Developer 2', 'description': 'Lorem ipsum...', 'photo': 'images/developers/2.jpeg'},
+        {'name': 'Developer 3', 'description': 'Lorem ipsum...', 'photo': 'images/developers/3.jpeg'},
+        {'name': 'Developer 4', 'description': 'Lorem ipsum...', 'photo': 'images/developers/4.jpeg'},
+    ]
 @app.route('/')
 def index():
     return render_template('index.html')  
@@ -42,6 +49,10 @@ def index():
 @app.route('/input')
 def input_page():
     return render_template('input.html') 
+
+@app.route('/about')
+def about():
+    return render_template('about.html', developers=developers)
 
 @app.route('/submit-data', methods=['POST'])
 def submit_data():
