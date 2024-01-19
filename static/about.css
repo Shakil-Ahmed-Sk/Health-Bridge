@@ -8,6 +8,7 @@ body {
 }
 .about-content-div {
     background-color: #007bff7a;
+    background-size: cover;
     color: white;
     padding: 20px;
     text-align: center;
@@ -42,7 +43,7 @@ ul li {
 .card {
     width: 200px;
     background-color:whitesmoke;
-    border: 1px solid ;
+    border: 0.5px lightslategray;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
@@ -91,8 +92,29 @@ ul li {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .brainware-university-container button:hover {
     background-color: #0056b3;
+} 
+.content a.button-link {
+    background-color: #007bff;
+    color: white;
+    padding-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 55px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
