@@ -54,6 +54,10 @@ def input_page():
 def about():
     return render_template('about.html', developers=developers)
 
+@app.route('/feedback')
+def about():
+    return render_template('feedback.html', developers=developers)
+
 @app.route('/submit-data', methods=['POST'])
 def submit_data():
     if request.method == 'POST':
