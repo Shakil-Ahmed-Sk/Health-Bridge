@@ -3,12 +3,11 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
-    color: #343a40;
     margin: 0;
     padding: 0;
 }
 .about-content-div {
-    background-color: #007bff;
+    background-color: #007bff7a;
     color: white;
     padding: 20px;
     text-align: center;
@@ -42,10 +41,16 @@ ul li {
 
 .card {
     width: 200px;
-    border: 1px solid #dee2e6;
+    background-color:whitesmoke;
+    border: 1px solid ;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    border-radius:15px ;
+    -webkit-border-radius:15px ;
+    -moz-border-radius:15px ;
+    -ms-border-radius:15px ;
+    -o-border-radius:15px ;
 }
 
 .card img {
@@ -57,15 +62,24 @@ ul li {
 .card h3 {
     color: #007bff;
 }
+/* Brainware university */
+.container-around{
+    background-image: url('/static/images/Brainware_university1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Adjust the padding as needed */
+    width: 100%; /* Ensure the container takes the full width of its parent */
+}
 
 .brainware-university-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px; /* Add margin from the top */
 }
 
 .brainware-university-container img {
-    max-width: 150px;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .brainware-university-container button {
@@ -76,6 +90,7 @@ ul li {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .brainware-university-container button:hover {
