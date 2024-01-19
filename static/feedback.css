@@ -1,0 +1,22 @@
+/* static/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+#comments-container {
+    margin-bottom: 20px;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.admin-reply {
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-top: 5px;
+}
