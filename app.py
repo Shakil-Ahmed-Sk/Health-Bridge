@@ -51,6 +51,10 @@ def about():
 def feedback():
     return render_template('feedback.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 @app.route('/submit-data', methods=['POST'])
 def submit_data():
     if request.method == 'POST':
