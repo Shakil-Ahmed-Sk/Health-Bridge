@@ -6,11 +6,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
-from flask import Flask, render_template, request
-from flask_socketio import SocketIO
 
-app = Flask(__name__, template_folder='templates', static_url_path='/static/')
-socketio = SocketIO(app)
+app = Flask(__name__, template_folder='templates',static_url_path='/static/')
 
 # Loading the diabetes dataset to a pandas dataframe
 diabetes_dataset = pd.read_csv("diabetics.csv")
@@ -50,17 +47,9 @@ def input_page():
 def about():
     return render_template('about.html')
 
-# List to store comments
-comments = []
-
 @app.route('/feedback')
 def feedback():
-    return render_template('feedback.html' , comments=comments)
-
-@socketio.on('new_comment')
-def handle_comment(data):
-    comments.append(data)
-    socketio.emit('new_comment', data, broadcast=True)
+    return render_template('feedback.html')
 
 @app.route('/submit-data', methods=['POST'])
 def submit_data():
