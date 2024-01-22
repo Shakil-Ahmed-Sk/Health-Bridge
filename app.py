@@ -51,6 +51,22 @@ def about():
 def feedback():
     return render_template('feedback.html')
 
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    if request.method == 'POST':
+        # Handle the form submission logic here
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        message = request.form['message']
+
+        # Perform any required actions with the form data
+        # For example, print the form data to the console
+        print(f"Name: {name}, Email: {email}, Phone: {phone}, Message: {message}")
+
+    return render_template('index.html')
+
+
 @app.route('/login')
 def login():
     return render_template('login.html')

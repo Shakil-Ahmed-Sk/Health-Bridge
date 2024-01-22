@@ -1,25 +1,18 @@
-// static/script.js
+const inputs = document.querySelectorAll(".input");
 
-let socket = io.connect('http://' + document.domain + ':' + location.port);
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
 
-socket.on('new_comment', function (data) {
-    displayComment(data);
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
 });
-
-function submitComment() {
-    let username = document.getElementById('username').value;
-    let commentText = document.getElementById('comment').value;
-
-    if (username && commentText) {
-        let data = { username: username, text: commentText };
-        socket.emit('new_comment', data);
-        document.getElementById('comment-form').reset();
-    }
-}
-
-function displayComment(data) {
-    let commentsContainer = document.getElementById('comments-container');
-    let commentDiv = document.createElement('div');
-    commentDiv.innerHTML = '<strong>' + data.username + ':</strong> ' + data.text;
-    commentsContainer.appendChild(commentDiv);
-}
