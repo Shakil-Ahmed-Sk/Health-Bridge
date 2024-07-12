@@ -16,14 +16,14 @@
   </script>
   <!--End of Tawk.to Script-->
   <link rel="icon" type="image/x-icon" href="/static/images/icon/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleai.css') }}">
-  <title>Data Input Page for Parkinson</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='parkinson.css') }}">
+  <title>Data Input Page for Diabetes</title>
   <link rel="stylesheet" href=""> <!-- Link your CSS file -->
 </head>
 <body>
 
   <div class="container">
-    <h1>Data Input for Parkinson</h1>
+    <h1>Data Input for Diabetes</h1>
     <form id="myForm" action="/submit-data" method="POST" onsubmit="return validateForm()"> <!-- Add onsubmit event -->
       <div class="form-group">
         <label for="age">Age:</label>
@@ -31,39 +31,39 @@
         <span id="ageError" class="error-message"></span> <!-- Error message placeholder -->
       </div>
       <div class="form-group">
-        <label for="gender">Gender:</label>
+        <label for="gender">Bradykinesia</label>
         <select id="gender" name="gender" required>
-          <option value="" disabled selected>Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="" disabled selected>Select Bradykinesia</option>
+          <option value="male">Postural</option>
+          <option value="female">Rigidity</option>
           <option value="other">Other</option>
         </select>
         <span id="genderError" class="error-message"></span> <!-- Error message placeholder -->
       </div>
       <div class="form-group">
-        <label for="hypertension">Hypertension:</label>
+        <label for="hypertension">Masked Facies</label>
         <input type="checkbox" id="hypertension" name="hypertension">
       </div>
       <div class="form-group">
-        <label for="heartDisease">Heart Disease:</label>
+        <label for="heartDisease">Freezing of Gait</label>
         <input type="checkbox" id="heartDisease" name="heartDisease">
       </div>
       <div class="form-group">
-        <label for="smoking">Smoking:</label>
+        <label for="smoking">Non-motor Symptoms</label>
         <input type="checkbox" id="smoking" name="smoking">
       </div>
       <div class="form-group">
-        <label for="bmi">BMI:</label>
+        <label for="bmi">Tremors</label>
         <input type="number" id="bmi" name="bmi" min="0" step="0.01">
         <span id="bmiError" class="error-message"></span> <!-- Error message placeholder -->
       </div>
       <div class="form-group">
-        <label for="hba1c">HbA1c Level:</label>
+        <label for="hba1c">Bradykinesia Level</label>
         <input type="number" id="hba1c" name="hba1c" min="0" step="0.01">
         <span id="hba1cError" class="error-message"></span> <!-- Error message placeholder -->
       </div>
       <div class="form-group">
-        <label for="bloodGlucose">Blood Glucose Level:</label>
+        <label for="bloodGlucose">Micrographia</label>
         <input type="number" id="bloodGlucose" name="bloodGlucose" min="0" step="0.01">
         <span id="bloodGlucoseError" class="error-message"></span> <!-- Error message placeholder -->
       </div>
@@ -124,4 +124,3 @@
   </script>
 </body>
 </html>
-

@@ -2,72 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/658c682770c9f2407f83c91d/1him7dncj';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/658c682770c9f2407f83c91d/1him7dncj';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
-  <!--End of Tawk.to Script-->
+  <!-- End of Tawk.to Script -->
   <link rel="icon" type="image/x-icon" href="/static/images/icon/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleai.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='heart.css') }}">
   <title>Data Input Page for Heart</title>
-  <link rel="stylesheet" href=""> <!-- Link your CSS file -->
 </head>
 <body>
 
   <div class="container">
     <h1>Data Input for Heart</h1>
     <form id="myForm" action="/submit-data" method="POST" onsubmit="return validateForm()"> <!-- Add onsubmit event -->
-      <div class="form-group">
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="0" required>
-        <span id="ageError" class="error-message"></span> <!-- Error message placeholder -->
+      <div class="card">
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="0" required>
+          <span id="ageError" class="error-message"></span> <!-- Error message placeholder -->
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <span id="genderError" class="error-message"></span> <!-- Error message placeholder -->
+        </div>
+        <div class="form-group">
+          <label for="hypertension">Hypertension</label>
+          <input type="checkbox" id="hypertension" name="hypertension">
+        </div>
+        <div class="form-group">
+          <label for="heartDisease">Stroke</label>
+          <input type="checkbox" id="heartDisease" name="heartDisease">
+        </div>
+        <div class="form-group">
+          <label for="smoking">Smoking</label>
+          <input type="checkbox" id="smoking" name="smoking">
+        </div>
+        <div class="form-group">
+          <label for="bmi">Blood Pressure</label>
+          <input type="number" id="bmi" name="bmi" min="0" step="0.01">
+          <span id="bmiError" class="error-message"></span> <!-- Error message placeholder -->
+        </div>
+        <div class="form-group">
+          <label for="hba1c">Cholesterol Levels</label>
+          <input type="number" id="hba1c" name="hba1c" min="0" step="0.01">
+          <span id="hba1cError" class="error-message"></span> <!-- Error message placeholder -->
+        </div>
+        <div class="form-group">
+          <label for="bloodGlucose">Blood Glucose Level</label>
+          <input type="number" id="bloodGlucose" name="bloodGlucose" min="0" step="0.01">
+          <span id="bloodGlucoseError" class="error-message"></span> <!-- Error message placeholder -->
+        </div>
+        <button type="submit">Submit</button>
       </div>
-      <div class="form-group">
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-          <option value="" disabled selected>Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-        <span id="genderError" class="error-message"></span> <!-- Error message placeholder -->
-      </div>
-      <div class="form-group">
-        <label for="hypertension">Hypertension:</label>
-        <input type="checkbox" id="hypertension" name="hypertension">
-      </div>
-      <div class="form-group">
-        <label for="heartDisease">Heart Disease:</label>
-        <input type="checkbox" id="heartDisease" name="heartDisease">
-      </div>
-      <div class="form-group">
-        <label for="smoking">Smoking:</label>
-        <input type="checkbox" id="smoking" name="smoking">
-      </div>
-      <div class="form-group">
-        <label for="bmi">BMI:</label>
-        <input type="number" id="bmi" name="bmi" min="0" step="0.01">
-        <span id="bmiError" class="error-message"></span> <!-- Error message placeholder -->
-      </div>
-      <div class="form-group">
-        <label for="hba1c">HbA1c Level:</label>
-        <input type="number" id="hba1c" name="hba1c" min="0" step="0.01">
-        <span id="hba1cError" class="error-message"></span> <!-- Error message placeholder -->
-      </div>
-      <div class="form-group">
-        <label for="bloodGlucose">Blood Glucose Level:</label>
-        <input type="number" id="bloodGlucose" name="bloodGlucose" min="0" step="0.01">
-        <span id="bloodGlucoseError" class="error-message"></span> <!-- Error message placeholder -->
-      </div>
-      <button type="submit">Submit</button>
     </form>
   </div>
 
