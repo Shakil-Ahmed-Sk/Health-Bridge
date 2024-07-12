@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/658c682770c9f2407f83c91d/1him7dncj';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <link rel="icon" type="image/x-icon" href="/static/images/icon/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleai.css') }}">
+  <title>Data Input Page for Diabetes</title>
+  <link rel="stylesheet" href=""> <!-- Link your CSS file -->
+</head>
+<body>
+
+  <div class="container">
+    <h1>Data Input for Diabetes</h1>
+    <form id="myForm" action="/submit-data" method="POST" onsubmit="return validateForm()"> <!-- Add onsubmit event -->
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" required>
+        <span id="ageError" class="error-message"></span> <!-- Error message placeholder -->
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <span id="genderError" class="error-message"></span> <!-- Error message placeholder -->
+      </div>
+      <div class="form-group">
+        <label for="hypertension">Hypertension:</label>
+        <input type="checkbox" id="hypertension" name="hypertension">
+      </div>
+      <div class="form-group">
+        <label for="heartDisease">Heart Disease:</label>
+        <input type="checkbox" id="heartDisease" name="heartDisease">
+      </div>
+      <div class="form-group">
+        <label for="smoking">Smoking:</label>
+        <input type="checkbox" id="smoking" name="smoking">
+      </div>
+      <div class="form-group">
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" min="0" step="0.01">
+        <span id="bmiError" class="error-message"></span> <!-- Error message placeholder -->
+      </div>
+      <div class="form-group">
+        <label for="hba1c">HbA1c Level:</label>
+        <input type="number" id="hba1c" name="hba1c" min="0" step="0.01">
+        <span id="hba1cError" class="error-message"></span> <!-- Error message placeholder -->
+      </div>
+      <div class="form-group">
+        <label for="bloodGlucose">Blood Glucose Level:</label>
+        <input type="number" id="bloodGlucose" name="bloodGlucose" min="0" step="0.01">
+        <span id="bloodGlucoseError" class="error-message"></span> <!-- Error message placeholder -->
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var age = document.getElementById("age").value;
+      var gender = document.getElementById("gender").value;
+      var bmi = document.getElementById("bmi").value;
+      var hba1c = document.getElementById("hba1c").value;
+      var bloodGlucose = document.getElementById("bloodGlucose").value;
+
+      if (age == "") {
+        document.getElementById("ageError").innerText = "Please enter your age."; // Display error message for age
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("ageError").innerText = ""; // Clear error message
+      }
+
+      if (gender == "") {
+        document.getElementById("genderError").innerText = "Please select your gender."; // Display error message for gender
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("genderError").innerText = ""; // Clear error message
+      }
+
+      // Validation for BMI
+      if (bmi == "") {
+        document.getElementById("bmiError").innerText = "Please enter your BMI."; // Display error message for BMI
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("bmiError").innerText = ""; // Clear error message
+      }
+
+      // Validation for HbA1c Level
+      if (hba1c == "") {
+        document.getElementById("hba1cError").innerText = "Please enter your HbA1c level."; // Display error message for HbA1c level
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("hba1cError").innerText = ""; // Clear error message
+      }
+
+      // Validation for Blood Glucose Level
+      if (bloodGlucose == "") {
+        document.getElementById("bloodGlucoseError").innerText = "Please enter your blood glucose level."; // Display error message for blood glucose level
+        return false; // Prevent form submission
+      } else {
+        document.getElementById("bloodGlucoseError").innerText = ""; // Clear error message
+      }
+
+      // Add validation for other fields similarly if needed
+
+      return true; // Allow form submission if all validations pass
+    }
+  </script>
+</body>
+</html>

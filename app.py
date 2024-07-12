@@ -38,10 +38,18 @@ print('Accuracy score of the test data:', test_data_accuracy)
 @app.route('/')
 def index():
     return render_template('index.html')  
- 
-@app.route('/input')
-def input_page():
-    return render_template('input.html') 
+@app.route('/diabetes')
+def diabetes_page():
+    return render_template('diabetes.html') 
+
+@app.route('/heart')
+def heart_page():
+    return render_template('heart.html') 
+
+@app.route('/parkinson')
+def parkinson_page():
+    return render_template('parkinson.html') 
+
 
 @app.route('/about')
 def about():
@@ -103,7 +111,7 @@ def submit_data():
         # Predict using the loaded model
         prediction = classifier.predict(std_data)
 
-        result = 'The person is diabetic.' if prediction[0] == 1 else 'The person is not diabetic.'
+        result = 'The person is Positive.' if prediction[0] == 1 else 'The person is Negative.'
 
         return render_template('result.html', prediction_result=result)
     else:

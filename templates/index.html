@@ -17,63 +17,56 @@
         <a href="#icon" class="logo-link">
             <img src="/static/images/Ai_icon.png" class="logo" alt="AI Logo" />
         </a>
-        <!-- Update the Home link to use 'index' as the endpoint -->
-            <a class="{{ 'active' if page == 'home' else '' }}" href="{{ url_for('index') }}"><b>Home</b></a>
-            <a class="{{ 'active' if page == 'about' else '' }}" href="{{ url_for('about') }}"><b>About</b></a>
-            <a class="{{ 'active' if page == 'feedback' else '' }}" href="{{ url_for('feedback') }}"><b>Feedback</b></a>
-            <a class="{{ 'active' if page == 'login' else '' }}" href="{{ url_for('login') }}"><b>login</b></a>
-
-
+        <a class="{{ 'active' if page == 'home' else '' }}" href="{{ url_for('index') }}"><b>Home</b></a>
+        <a class="{{ 'active' if page == 'about' else '' }}" href="{{ url_for('about') }}"><b>About</b></a>
+        <a class="{{ 'active' if page == 'feedback' else '' }}" href="{{ url_for('feedback') }}"><b>Feedback</b></a>
+        <a class="{{ 'active' if page == 'login' else '' }}" href="{{ url_for('login') }}"><b>login</b></a>
     </div>
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <img src="{{ url_for('static', filename='images/ai/1.jpg') }}" style="width:100%">
             <div class="text"></div>
         </div>
-
         <div class="mySlides fade">
             <img src="{{ url_for('static', filename='images/ai/2.jpg') }}" style="width:100%">
             <div class="text"></div>
         </div>
-
         <div class="mySlides fade">
             <img src="{{ url_for('static', filename='images/ai/3.jpg') }}" style="width:100%">
             <div class="text"></div>
         </div>
-
         <div class="mySlides fade">
             <img src="{{ url_for('static', filename='images/ai/4.jpg') }}" style="width:100%">
             <div class="text"></div>
         </div>
-
         <div class="mySlides fade">
             <img src="{{ url_for('static', filename='images/ai/5.jpg') }}" style="width:100%">
             <div class="text"></div>
         </div>
-        </div>
+    </div>
 
     <!-- Middle Part with AI Information -->
     <div class="midpart">
         <div class="info_AI">
             <h1 class="Ai-heading"><b> Artificial Intelligence in Healthcare</b></h1>
             <p><b>Artificial Intelligence (AI) has the potential to improve every aspect of
-                    healthcare by accelerating<br> scientific discovery, improving medical advice for patients, and
-                    reducing the burden of paperwork.<br> However, the US health sector struggles to put innovations
-                    like AI into practice due to<br> "switchover disruptions," the costly phase-in period for new
+                    healthcare by accelerating scientific discovery, improving medical advice for patients, and
+                    reducing the burden of paperwork. However, the US health sector struggles to put innovations
+                    like AI into practice due to "switchover disruptions," the costly phase-in period for new
                     technologies that can upend profitable operations.</b></p>
             <p><b>The use of AI and the Internet of Medical
-                    Things (IoMT) in consumer health applications is already helping<br> people stay healthy. AI
-                    increases the ability for healthcare professionals to better understand <br>the day-to-day patterns
+                    Things (IoMT) in consumer health applications is already helping people stay healthy. AI
+                    increases the ability for healthcare professionals to better understand the day-to-day patterns
                     and needs of the</b></p>
         </div>
 
         <!-- Go button -->
         <div>
-            <a href="/input" class="neon-button">AI Health Bridge</a>
+            <a href="/diabetes" class="neon-button">Diabetes Disease AI </a>
+            <a href="/heart" class="neon-button">Heart Disease AI</a>
+            <a href="/parkinson" class="neon-button">Parkinson Disease AI </a>
         </div>
     </div>
 
@@ -82,11 +75,9 @@
 
     <!-- Tawk.to Script for Live Chat -->
     <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
             s1.src = 'https://embed.tawk.to/658c682770c9f2407f83c91d/1him7dncj';
             s1.charset = 'UTF-8';

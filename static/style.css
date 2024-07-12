@@ -1,21 +1,24 @@
 /* Body part */
 body {
   background-color: rgba(0, 255, 255, 0.303);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* For Top Nav Bar */
 .TopNavBar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 50px;
   background-image: linear-gradient(to right, #239ff8, #7eff9b);
-  overflow: hidden;
   padding: 0 10px;
 }
 
 .TopNavBar a {
-  font-size: x-large;
+  font-size: 1rem;
   text-decoration: none;
   color: #fff;
   padding: 10px;
@@ -29,43 +32,49 @@ body {
 .logo {
   height: 30px;
   width: 30px;
-  transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+  transition: transform 0.3s ease;
 }
 
 /* Hover effect for the logo */
 .logo-link:hover .logo {
-  margin-top: 9px;
-  transform: scale(1.6); /* Scale the logo on hover */
+  transform: scale(1.6);
+}
+
+/* Slideshow */
+.slideshow-container {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.mySlides img {
+  width: 100%;
+}
+
+/* Middle Part with AI Information */
+.midpart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.info_AI {
+  max-width: 600px;
+  margin: 20px;
 }
 
 .Ai-heading {
   font-family: 'Times New Roman', Times, serif;
   background-image: linear-gradient(to right, #239ff8, #7eff9b);
-  color: white; /* Set text color for visibility */
-  padding: 7px; /* Add some padding for readability */
+  color: white;
+  padding: 7px;
   border-radius: 5px;
 }
 
-.info_AI {
-  float: left;
-}
-
-.midpart {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 100px;
-}
-
-.midpart .info_AI {
-  float: left;
-  position: relative;
-  right: 14%;
-}
-
-/* Styles for the button link */
 .neon-button {
   display: inline-block;
   padding: 15px 25px;
@@ -74,16 +83,55 @@ body {
   color: #fff;
   border: none;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #239ff8, #7eff9b); /* Light green neon gradient */
+  background-image: linear-gradient(to right, #239ff8, #7eff9b);
   transition: background-color 0.3s, color 0.3s;
+  margin: 10px;
 }
 
-/* Neon glow effect on hover */
 .neon-button:hover {
   transform: scale(1.2);
-  background-image: linear-gradient(to right, #7eff9b, #239ff8); /* Reverse gradient on hover */
-  box-shadow: 0 0 10px #239ff8, 0 0 20px #239ff8, 0 0 40px #239ff8; /* Adding a glow effect */
+  background-image: linear-gradient(to right, #7eff9b, #239ff8);
+  box-shadow: 0 0 10px #239ff8, 0 0 20px #239ff8, 0 0 40px #239ff8;
 }
-.slideshow-container{
-  padding-top: 5px;
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .TopNavBar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .TopNavBar a {
+    font-size: 0.9rem;
+  }
+
+  .midpart {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .info_AI {
+    margin: 10px;
+  }
+
+  .neon-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopNavBar {
+    padding: 0 5px;
+  }
+
+  .TopNavBar a {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .neon-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
 }
